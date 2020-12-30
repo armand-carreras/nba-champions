@@ -1,0 +1,17 @@
+<mat-card *ngFor='let finale of championsArray'>
+  <div class="header">
+    <h2>{{finale.champion}} VS. {{finale.defeated}}</h2>
+    <h3>{{finale.year}} <a [href]='finale.championURL'>Winner: {{finale.champion}}</a></h3>
+  </div>
+  <mat-card-content>
+    <img [src]='finale.championImg'>
+    <div>
+      <h2>Best Players:</h2>
+      <mat-list>
+        <mat-list-item *ngFor='let player of finale.bestPlayers'>
+          {{player}}
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card-content>
+</mat-card>
